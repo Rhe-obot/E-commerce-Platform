@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { AuthProvider } from './AuthContext';
-import reportWebVitals from './reportWebVitals';
+import { CartProvider } from './CartContext';
+import './index.css';
+
 ReactDOM.render(
-  <AuthProvider>
-    <App />
-  </AuthProvider>,
+  <React.StrictMode>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
-
-reportWebVitals();
